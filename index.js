@@ -12,7 +12,7 @@ bookshelf.plugin('virtuals')
 
 // Setup Hapi
 const server = new Hapi.Server();
-server.connection({ routes: {cors: true }, port: 3000 });
+server.connection({ routes: { cors: true }, router: { stripTrailingSlash: true }, port: 3000 });
 
 
 // Models ====================
